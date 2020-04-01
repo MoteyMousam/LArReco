@@ -24,6 +24,7 @@
 		<MCParticleListNames>Input</MCParticleListNames>
         <ShowDetector>true</ShowDetector>
     </algorithm-->
+
     <algorithm type = "LArMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_Standard.xml</CRSettingsFile>
         <NuSettingsFile>PandoraSettings_Neutrino_DUNEFD.xml</NuSettingsFile>

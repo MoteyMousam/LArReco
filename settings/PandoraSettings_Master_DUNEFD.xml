@@ -13,8 +13,15 @@
         <FilteredCaloHitListName>CaloHitList2D</FilteredCaloHitListName>
         <CurrentCaloHitListReplacement>CaloHitList2D</CurrentCaloHitListReplacement>
     </algorithm>
+
+    <!--algorithm type = "LArMCParticleMonitoring">
+        <CaloHitListName>CaloHitList2D</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+	<MinHitsForDisplay>1</MinHitsForDisplay>
+    </algorithm-->
     <algorithm type = "LArVisualMonitoring">
         <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
+		<MCParticleListNames>Input</MCParticleListNames>
         <ShowDetector>true</ShowDetector>
     </algorithm>
 
@@ -34,12 +41,18 @@
         </SliceIdTools>
         <InputHitListName>CaloHitList2D</InputHitListName>
         <InputMCParticleListName>Input</InputMCParticleListName>
-        <PassMCParticlesToWorkerInstances>false</PassMCParticlesToWorkerInstances>
+        <PassMCParticlesToWorkerInstances>true</PassMCParticlesToWorkerInstances>
         <RecreatedPfoListName>RecreatedPfos</RecreatedPfoListName>
         <RecreatedClusterListName>RecreatedClusters</RecreatedClusterListName>
         <RecreatedVertexListName>RecreatedVertices</RecreatedVertexListName>
         <VisualizeOverallRecoStatus>false</VisualizeOverallRecoStatus>
     </algorithm>
+
+    <!--algorithm type = "LArVisualMonitoring">
+        <ShowCurrentPfos>true</ShowCurrentPfos>
+        <ShowCurrentClusters>true</ShowCurrentClusters>
+        <ShowDetector>true</ShowDetector>
+    </algorithm-->
 
     <algorithm type = "LArNeutrinoEventValidation">
         <CaloHitListName>CaloHitList2D</CaloHitListName>
@@ -47,7 +60,7 @@
         <PfoListName>RecreatedPfos</PfoListName>
         <UseTrueNeutrinosOnly>false</UseTrueNeutrinosOnly>
         <PrintAllToScreen>false</PrintAllToScreen>
-        <PrintMatchingToScreen>true</PrintMatchingToScreen>
+        <PrintMatchingToScreen>false</PrintMatchingToScreen>
         <WriteToTree>false</WriteToTree>
         <OutputTree>Validation</OutputTree>
         <OutputFile>Validation.root</OutputFile>
@@ -55,6 +68,7 @@
 
     <algorithm type = "LArVisualMonitoring">
         <ShowCurrentPfos>true</ShowCurrentPfos>
+        <ShowCurrentClusters>true</ShowCurrentClusters>
         <ShowDetector>true</ShowDetector>
     </algorithm>
 </pandora>

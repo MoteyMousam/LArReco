@@ -19,11 +19,12 @@
         <MCParticleListName>Input</MCParticleListName>
 	<MinHitsForDisplay>1</MinHitsForDisplay>
     </algorithm-->
-    <algorithm type = "LArVisualMonitoring">
+
+    <!--algorithm type = "LArVisualMonitoring">
         <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
 		<MCParticleListNames>Input</MCParticleListNames>
         <ShowDetector>true</ShowDetector>
-    </algorithm>
+    </algorithm-->
 
     <algorithm type = "LArMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_Standard.xml</CRSettingsFile>
@@ -66,9 +67,9 @@
         <OutputFile>Validation.root</OutputFile>
     </algorithm>
 
-    <algorithm type = "LArVisualMonitoring">
+    <!--algorithm type = "LArVisualMonitoring">
         <ShowCurrentPfos>true</ShowCurrentPfos>
         <ShowCurrentClusters>true</ShowCurrentClusters>
         <ShowDetector>true</ShowDetector>
-    </algorithm>
+    </algorithm-->
 </pandora>

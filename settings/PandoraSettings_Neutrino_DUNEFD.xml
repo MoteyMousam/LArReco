@@ -369,7 +369,7 @@
         </FeatureToolsNoChargeInfo>
 		<WriteToTree>false</WriteToTree>
 		<OutputTree>tree</OutputTree>
-		<OutputFile>test.root</OutputFile>
+		<OutputFile>tree.root</OutputFile>
     </algorithm>
 
     <algorithm type = "LArNeutrinoProperties">

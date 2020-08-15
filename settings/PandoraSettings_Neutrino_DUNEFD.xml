@@ -342,12 +342,12 @@
         <MCParticleListName>Input</MCParticleListName>
         <CaloHitListName>CaloHitList2D</CaloHitListName>
         <UseThreeDInformation>true</UseThreeDInformation>
-        <MvaFileName>/storage/epp2/phrwdg/Dune/testPandora/LArMachineLearningData/scripts/PandoraBDT_TrainingOutput_TUNED_NTrees_800_TreeDepth_5.xml</MvaFileName>
+        <MvaFileName>/path/to/LArMachineLearningData/scripts/PandoraBDT_TrainingOutput.xml</MvaFileName>
         <MvaName>PfoCharacterisation</MvaName>
-        <MvaFileNameNoChargeInfo>/storage/epp2/phrwdg/Dune/testPandora/LArMachineLearningData/scripts/PandoraBDT_TrainingOutput_TUNEDnoChargeInfo_NTrees_800_TreeDepth_5.xml</MvaFileNameNoChargeInfo>
+        <MvaFileNameNoChargeInfo>/path/to/LArMachineLearningData/scripts/PandoraBDT_TrainingOutput_noChargeInfo.xml</MvaFileNameNoChargeInfo>
         <MvaNameNoChargeInfo>PfoCharacterisationNoChargeInfo</MvaNameNoChargeInfo>
         <TrainingSetMode>false</TrainingSetMode>
-        <TrainingOutputFileName>PandoraBDT_TrainingOutput_retest_new</TrainingOutputFileName>
+        <TrainingOutputFileName>training_output</TrainingOutputFileName>
         <FeatureTools>
             <tool type = "LArThreeDLinearFitFeatureTool"/>
             <tool type = "LArThreeDVertexDistanceFeatureTool"/>

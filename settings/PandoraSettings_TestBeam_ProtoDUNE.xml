@@ -343,6 +343,42 @@
         <KeepStartVertex>true</KeepStartVertex>
     </algorithm>
 
+    <algorithm type = "LArBdtPfoCharacterisation">
+        <TrackPfoListName>TrackParticles3D</TrackPfoListName>
+        <ShowerPfoListName>ShowerParticles3D</ShowerPfoListName>
+        <MCParticleListName>Input</MCParticleListName>
+        <CaloHitListName>CaloHitList2D</CaloHitListName>
+        <UseThreeDInformation>true</UseThreeDInformation>
+        <SvmFileName>/storage/epp2/phrwdg/Dune/release_Pandora/LArMachineLearningData/scripts/PandoraBDT_protoDUNE_tuned_NTrees_400_TreeDepth_4.xml</SvmFileName>
+        <SvmName>PfoCharacterisation</SvmName>
+        <SvmFileNameNoChargeInfo>/storage/epp2/phrwdg/Dune/release_Pandora/LArMachineLearningData/scripts/PandoraBDT_protoDUNE_noChargeInfo_tuned_NTrees_400_TreeDepth_4.xml</SvmFileNameNoChargeInfo>
+        <SvmNameNoChargeInfo>PfoCharacterisationNoChargeInfo</SvmNameNoChargeInfo>
+        <TrainingSetMode>false</TrainingSetMode>
+        <TrainingOutputFileName>potato_test</TrainingOutputFileName>
+        <FeatureTools>
+            <tool type = "LArThreeDLinearFitFeatureTool"/>
+            <tool type = "LArThreeDVertexDistanceFeatureTool"/>
+            <tool type = "LArThreeDPCAFeatureTool"/>
+			<tool type = "LArPfoHierarchyFeatureTool"/>
+            <tool type = "LArThreeDOpeningAngleFeatureTool">
+				<HitFraction>0.2</HitFraction>
+			</tool>
+            <tool type = "LArThreeDChargeFeatureTool"/>
+        </FeatureTools>
+        <FeatureToolsNoChargeInfo>
+            <tool type = "LArThreeDLinearFitFeatureTool"/>
+            <tool type = "LArThreeDVertexDistanceFeatureTool"/>
+            <tool type = "LArThreeDPCAFeatureTool"/>
+			<tool type = "LArPfoHierarchyFeatureTool"/>
+            <tool type = "LArThreeDOpeningAngleFeatureTool">
+				<HitFraction>0.2</HitFraction>
+			</tool>
+        </FeatureToolsNoChargeInfo>
+		<WriteToTree>true</WriteToTree>
+		<OutputTree>tree</OutputTree>
+		<OutputFile>tree_ProtoDUNE.root</OutputFile>
+    </algorithm>
+
     <!-- Track and shower building -->
     <algorithm type = "LArTrackParticleBuilding">
         <PfoListName>TrackParticles3D</PfoListName>
